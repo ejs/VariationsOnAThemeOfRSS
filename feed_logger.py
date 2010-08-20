@@ -3,57 +3,59 @@ import optparse
 import feedparser
 
 
-def load_feeds(filename):
+# Helper methods for many of the main loops
+def load_urls(filename):
     "load all the feeds from a .lst file"
     for line in open(filename):
         if line.strip():
             yield line.strip()
 
 
-def entries_for_feed(feed_url):
-    """generate all the entries of a rss feed
-       broken feeds are swallowed silently.
+def load_feeds(feed_url):
+    "This wrapper exists purly to silence feed loading errors"
+    try:
+        return feedparser.parse(feed_url)
+    except Exception, e:
+        print >> sys.stderr, "load", type(e)
+        return None
+
+
+def display_feed(feed):
+    """Dispaly every item in this feed to the termial
+        ignore invalid feeds
     """
     try:
-        feed = feedparser.parse(feed_url)
-        return [(feed_url, item) for item in feed['entries']]
-            #yield feed_url, item
-    except:
-        # Explicitly ignore errors
-        pass
+        for item in feed.entries:
+            print item.updated, feed.feed.link, item.title
+    except Exception, e:
+        print >> sys.stderr, "display", type(e)
 
 
-def display_item_details(feed, item):
-    "Display a brief description this item"
-    print item.updated, feed, item.title
-
-
-def main(filename, handler, _=None):
+# single thread syncronus code
+def main(filename, handler, count=None):
     """For all feeds in the file handle all
      elements with the handler function"""
-    for feed in load_feeds(filename):
-        for link, item in entries_for_feed(feed):
-            handler(link, item)
+    for feed_url in load_urls(filename):
+        handler(load_feeds(feed_url))
 
 
-def python_is_unix_main(filename, handler, count=3):
+#parallel versions of the code
+def fork_main(filename, handler, count=3):
     """ Capped forked child processed based off
         http://jacobian.org/writing/python-is-unix/
     """
     import os
-    feeds = list(load_feeds(filename))
+    urls = list(load_urls(filename))
     running = 0
-    while feeds:
+    while urls:
         if running < count:
-            # if we should make more processes pick and item
-            # and fork a process to handle it
+            # if we should make more processes pick an item
+            # and fork a process to download it
             running += 1
-            feed = feeds.pop()
+            feed_url = urls.pop()
             pid = os.fork()
-            if pid == 0:
-                #child process - handle one feed and die
-                for link, item in entries_for_feed(feed):
-                    handler(link, item)
+            if pid == 0: #child process - handle one feed and die
+                handler(load_feeds(feed_url))
                 break
         else:
             # if we have enough proccesses already
@@ -70,13 +72,13 @@ def python_is_unix_main(filename, handler, count=3):
 def multyprocess_main(filename, handler, count=3):
     """load all feeds over count processes
        then handle all results with the handler function
+       Delays untill all feeds are read before handling
     """
     import multiprocessing
 
     pool = multiprocessing.Pool(count)
-    for feed in pool.map(entries_for_feed, load_feeds(filename)):
-        for link, item in feed:
-            handler(link, item)
+    for feed in pool.map(load_feeds, load_urls(filename)):
+        handler(feed)
     pool.close()
 
 
@@ -85,11 +87,7 @@ def threaded_main(filename, handler, count=3):
 
 
 def twisted_main(filename, handler, count=3):
-    import twisted.internet
-
-
-
-    reactor.run()
+    pass
 
 
 if __name__ == '__main__':
@@ -105,6 +103,6 @@ if __name__ == '__main__':
     options, args = parser.parse_args()
     if args:
         for link in args:
-            options.main(link, display_item_details, options.processes)
+            options.main(link, display_feed, options.processes)
     else:
-        options.main("feeds.lst", display_item_details, options.processes)
+        options.main("feeds.lst", display_feed, options.processes)
