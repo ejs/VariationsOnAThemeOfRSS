@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="http://news.bbcimg.co.uk/shared/bsp/xsl/rss/nolsol.xsl"?>
+
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
+  <channel> 
+    <title>BBC News - Science &amp; Environment</title>  
+    <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science_and_environment/</link>  
+    <description>The latest stories from the Science &amp; Environment section of the BBC News web site.</description>  
+    <language>en-gb</language>  
+    <lastBuildDate>Fri, 20 Aug 2010 13:51:07 GMT</lastBuildDate>  
+    <copyright>Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.</copyright>  
+    <docs>http://www.bbc.co.uk/syndication/</docs>  
+    <ttl>15</ttl>  
+    <atom:link href="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml" rel="self" type="application/rss+xml"/>  
+    <item> 
+      <title>Chernobyl decline linked to DNA</title>  
+      <description>Scientists working in Chernobyl find a way to predict which species are likely to be most severely damaged by radioactive contamination.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11023530</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11023530</guid>  
+      <pubDate>Fri, 20 Aug 2010 09:17:58 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48797000/jpg/_48797094_abandoned_farm.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48797000/jpg/_48797250_abandoned_farm.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48797000/jpg/_48797095_abandoned_farm.jpg"/> 
+    </item>  
+    <item> 
+      <title>Study tracks ocean plastic spread</title>  
+      <description>US researchers measure the amount of plastic accumulating in a region of the Atlantic Ocean over a 22-year period.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11031291</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11031291</guid>  
+      <pubDate>Fri, 20 Aug 2010 13:47:18 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48798000/jpg/_48798725_plasticpieces.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48802000/jpg/_48802014_plasticpieces.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48798000/jpg/_48798728_plasticpieces.jpg"/> 
+    </item>  
+    <item> 
+      <title>Oil leak leaves undersea residue</title>  
+      <description>A study of the effects of the Deepwater Horizon oil leak confirms the presence of a residue of toxic chemicals below the sea surface.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11028622</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11028622</guid>  
+      <pubDate>Thu, 19 Aug 2010 18:04:48 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48800000/jpg/_48800127_009937035-1.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48800000/jpg/_48800125_009937035-1.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48800000/jpg/_48800128_009937035-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Dozens of stranded NZ whales die</title>  
+      <description>Some 58 pilot whales die after being stranded on a northern New Zealand coast, as volunteers battle to save remaining survivors.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-11036698</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-11036698</guid>  
+      <pubDate>Fri, 20 Aug 2010 11:20:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48806000/jpg/_48806815_jex_785227_de17-1.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48809000/jpg/_48809286_jex_785227_de17-1.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48809000/jpg/_48809291_jex_785227_de17-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Leafy veg 'may cut diabetes risk'</title>  
+      <description>A diet rich in green leafy vegetables, such as spinach, may reduce the risk of developing diabetes, say researchers.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/health-11028825</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/health-11028825</guid>  
+      <pubDate>Thu, 19 Aug 2010 23:46:27 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48799000/jpg/_48799410_leafy.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48799000/jpg/_48799407_leafy.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48799000/jpg/_48799408_leafy.jpg"/> 
+    </item>  
+    <item> 
+      <title>Disease threat to UK garden birds</title>  
+      <description>A disease that first emerged in 2005 is killing large numbers of greenfinches and chaffinches, researchers say.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11013507</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11013507</guid>  
+      <pubDate>Wed, 18 Aug 2010 23:02:16 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782569_greenfinch-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Churchill's butterflies fly again</title>  
+      <description>For the first time in half a century, butterflies are being bred at Chartwell, Winston Churchill's Kent home.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11025174</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11025174</guid>  
+      <pubDate>Thu, 19 Aug 2010 13:02:54 GMT</pubDate>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48795000/jpg/_48795678_paintedlady(cynthia-vanessacardui)butterfly,feedingonbuddleiabush(buddlejadavidii),northcornwall,uk2-cntpl-rosshoddinott.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48793000/jpg/_48793887_paintedlady(cynthia-vanessacardui)butterfly,feedingonbuddleiabush(buddlejadavidii),northcornwall,uk2-cntpl-rosshoddinott.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hope for future fight against TB</title>  
+      <description>International researchers say they have taken a "significant step" towards developing a predictive blood test for TB.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/health-11012653</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/health-11012653</guid>  
+      <pubDate>Wed, 18 Aug 2010 17:03:27 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782977_m270339-tuberculosis_pneumonia,_x-ray-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782975_m270339-tuberculosis_pneumonia,_x-ray-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782979_m270339-tuberculosis_pneumonia,_x-ray-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Light shed on black hole mystery</title>  
+      <description>Discovery of a rare magnetic star challenges theories about the origin of black holes, astronomers claim.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11011118</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11011118</guid>  
+      <pubDate>Wed, 18 Aug 2010 10:50:52 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48777000/jpg/_48777951_binary_star_system_containing_black_hole-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779824_binary_star_system_containing_black_hole-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48777000/jpg/_48777950_binary_star_system_containing_black_hole-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Criminals' walk 'could trap them'</title>  
+      <description>The way people walk could be used as a powerful surveillance tool, a nine-month study has revealed.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-england-hampshire-11025318</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-england-hampshire-11025318</guid>  
+      <pubDate>Thu, 19 Aug 2010 15:42:09 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48796000/jpg/_48796688_gaitrecognition.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48796000/jpg/_48796685_gaitrecognition.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48796000/jpg/_48796411_gaitrecognition.jpg"/> 
+    </item>  
+    <item> 
+      <title>Double earthquake caused tsunami</title>  
+      <description>A strange double earthquake triggered the Tonga tsunami that killed 192 people in September 2009, scientists say.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11013048</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11013048</guid>  
+      <pubDate>Wed, 18 Aug 2010 12:35:49 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779817_tsunami_warning_sign-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779815_tsunami_warning_sign-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779818_tsunami_warning_sign-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Universe 'likely to grow forever'</title>  
+      <description>A galactic magnifying glass shows the Universe will probably expand forever, resulting in a slow death.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11030889</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11030889</guid>  
+      <pubDate>Thu, 19 Aug 2010 18:33:04 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48801000/jpg/_48801772_middlelens.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48801000/jpg/_48801770_middlelens.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48801000/jpg/_48801774_middlelens.jpg"/> 
+    </item>  
+    <item> 
+      <title>Bat and moth arms race revealed</title>  
+      <description>A pair of studies cast light on a new strategy one bat uses to catch moths, and the way one moth deals with the threat.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11010458</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11010458</guid>  
+      <pubDate>Thu, 19 Aug 2010 17:06:25 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48788000/jpg/_48788853_tv006354168(2).jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48788000/jpg/_48788886_z918456-big_brown_bat-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48788000/jpg/_48788851_z918456-big_brown_bat-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Fossils may be 'earliest animals'</title>  
+      <description>Small, irregularly shaped fossils from South Australia could be the oldest remains of simple animal life found to date.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11001132</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11001132</guid>  
+      <pubDate>Wed, 18 Aug 2010 09:50:38 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774118_traced.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774117_traced.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48773000/jpg/_48773534_traced.jpg"/> 
+    </item>  
+    <item> 
+      <title>Sex or death for trembling aspen</title>  
+      <description>Certain trees can clone themselves suggesting they could live forever and avoid extinction, but a new study dashes that hope.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11003684</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11003684</guid>  
+      <pubDate>Wed, 18 Aug 2010 00:00:07 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48772000/jpg/_48772025_aspen.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48772000/jpg/_48772256_aspen.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48772000/jpg/_48772029_aspen.jpg"/> 
+    </item>  
+    <item> 
+      <title>Satellite tracks Pakistan floods</title>  
+      <description>Europe's Smos "water satellite" uses its innovative sensor to track the saturated soils of flood-stricken Pakistan.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10991541</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10991541</guid>  
+      <pubDate>Tue, 17 Aug 2010 11:36:12 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48767000/jpg/_48767286_satellite_smos2.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48767000/jpg/_48767846_satellite_smos2.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48767000/jpg/_48767282_satellite_smos2.jpg"/> 
+    </item>  
+    <item> 
+      <title>Bacteria 'have a sense of smell'</title>  
+      <description>A common type of bacteria has surprised researchers by demonstrating the ability to "smell" chemicals in the air.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10985313</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10985313</guid>  
+      <pubDate>Mon, 16 Aug 2010 10:42:24 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48752000/jpg/_48752574_b220575-bacillus_licheniformis_bacterium_dividing-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48752000/jpg/_48752573_b220575-bacillus_licheniformis_bacterium_dividing-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48752000/jpg/_48752575_b220575-bacillus_licheniformis_bacterium_dividing-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Space station cooling fault fixed</title>  
+      <description>International Space Station astronauts finish repairs to a faulty cooling system after a third spacewalk.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10986130</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10986130</guid>  
+      <pubDate>Mon, 16 Aug 2010 21:22:43 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762788_009989958-1.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762784_009989958-1.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762786_009989958-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Patrick Moore UFO film identified</title>  
+      <description>A science fiction film featuring astronomer Sir Patrick Moore is unearthed, more than 50 years since it was filmed in the grounds of an Irish country estate.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-northern-ireland-10985156</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-northern-ireland-10985156</guid>  
+      <pubDate>Mon, 16 Aug 2010 11:33:14 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48754000/jpg/_48754761_006827847-2.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48754000/jpg/_48754755_000194707-1.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48754000/jpg/_48754619_000194707-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Bees don't eat better on the farm</title>  
+      <description>Research from the Bee Part Of It campaign shows that farmlands provide a poorer diet than urban landscapes.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10998318</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10998318</guid>  
+      <pubDate>Tue, 17 Aug 2010 14:23:20 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771033_z345830-honeybee_on_flower-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771032_z345830-honeybee_on_flower-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771034_z345830-honeybee_on_flower-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Polar bear threat to Solway geese</title>  
+      <description>An Arctic expedition finds polar bears are preying on the eggs of geese who migrate to the south of Scotland each year.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-scotland-south-scotland-10988316</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-scotland-south-scotland-10988316</guid>  
+      <pubDate>Tue, 17 Aug 2010 00:28:45 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48759000/jpg/_48759360_beargullwithegg.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48759000/jpg/_48759813_beargullwithegg.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48759000/jpg/_48759366_beargullwithegg.jpg"/> 
+    </item>  
+    <item> 
+      <title>Africa 'poacher-shooting' concern</title>  
+      <description>Some conservation organisations in Africa are operating a shoot-to-kill policy against poachers, to protect endangered species, a study says.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-africa-10992502</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-africa-10992502</guid>  
+      <pubDate>Mon, 16 Aug 2010 18:06:45 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48760000/jpg/_48760611_rhino226bbc_index.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48761000/jpg/_48761510_rhino226bbc_index.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/46835000/jpg/_46835542_rhino226bbc_index.jpg"/> 
+    </item>  
+    <item> 
+      <title>Human link to giant turtle's end</title>  
+      <description>Humans may have been responsible for driving giant turtles to extinction 3,000 years ago, according to a new study.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10970082</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10970082</guid>  
+      <pubDate>Mon, 16 Aug 2010 19:13:01 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762190_meiolania-head.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762188_meiolania-head.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48762000/jpg/_48762191_meiolania-head.jpg"/> 
+    </item>  
+    <item> 
+      <title>'More call' for opencast mining</title>  
+      <description>Applications for opencast mining on greenfield sites are likely to increase to meet the UK's demand for energy, the British Geological Survey says.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-10977640</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-10977640</guid>  
+      <pubDate>Sun, 15 Aug 2010 06:30:40 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48744000/jpg/_48744384_mine.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48744000/jpg/_48744404_mine.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48744000/jpg/_48744382_mine.jpg"/> 
+    </item>  
+    <item> 
+      <title>Meteor shower reaches second peak</title>  
+      <description>Skywatchers across Europe enjoy another dazzling display as the annual Perseid meteor shower reached the second day of its peak.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10941034</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10941034</guid>  
+      <pubDate>Sat, 14 Aug 2010 03:15:21 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48721000/jpg/_48721391_009970290-2.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48721000/jpg/_48721390_009970290-2.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48721000/jpg/_48721392_009970290-2.jpg"/> 
+    </item>  
+    <item> 
+      <title>Win-win opportunity</title>  
+      <description>Mangroves provide a huge range of environmental benefits and need to be protected from "market failures"</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/1/hi/sci/tech/8893767.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/1/hi/sci/tech/8893767.stm</guid>  
+      <pubDate>Mon, 09 Aug 2010 15:58:54 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48664000/jpg/_48664944_mangrovereflectspl226i.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48664000/jpg/_48664945_mangrovereflectspl226i.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48664000/jpg/_48664946_mangrovereflectspl226i.jpg"/> 
+    </item>  
+    <item> 
+      <title>Greenfinch population plummeting</title>  
+      <description>A decline in the greenfinch population in the eastern counties has been blamed on an infectious disease.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-england-11037830</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-england-11037830</guid>  
+      <pubDate>Fri, 20 Aug 2010 10:56:27 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48808000/jpg/_48808254_finch.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48808000/jpg/_48808256_finch.jpg"/> 
+    </item>  
+    <item> 
+      <title>Egg thief filmed dangling over nests</title>  
+      <description>Footage has emerged of convicted rare egg smuggler Jeffrey Lendrum lowering himself from a helicopter in Canada to reach a nest.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-11027954</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-11027954</guid>  
+      <pubDate>Thu, 19 Aug 2010 16:13:20 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48799000/gif/_48799597_eggs.gif"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48799000/gif/_48799598_eggs.gif"/> 
+    </item>  
+    <item> 
+      <title>Did life on Earth evolve twice?</title>  
+      <description>Dr Adam Maloof explains how the discovery of a sponge fossil shows animals evolved 90 million years earlier than previously thought</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_8923000/8923565.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_8923000/8923565.stm</guid>  
+      <pubDate>Wed, 18 Aug 2010 08:38:40 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48777000/jpg/_48777001_007924770-1.jpg"/>  
+      <media:thumbnail width="512" height="288" url="http://news.bbcimg.co.uk/media/images/48777000/jpg/_48777003_007924770-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Falcons 'victims of human greed'</title>  
+      <description>Jeffrey Lendrum has admitted attempting to smuggle rare bird eggs out of Britain. Guy Shorrock from the RSPB told the BBC's Claire Marshall the birds were ''victims of human greed'' and Lendrum stood to make ''tens of thousands of pounds'' from his crimes.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-11024923</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-11024923</guid>  
+      <pubDate>Thu, 19 Aug 2010 10:39:06 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48793000/jpg/_48793319_009069579-1.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48795000/jpg/_48795143_009069579-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Protecting the UK's rarest coral</title>  
+      <description>The waters around Lundy Island in the Bristol Channel are home to more species of marine life than any other part of Britain.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-11014725</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-11014725</guid>  
+      <pubDate>Wed, 18 Aug 2010 13:01:00 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782635_jex_783039_de40-1.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782637_jex_783039_de40-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Plant grows eight metres in two months</title>  
+      <description>A Cornwall couple said they returned from holiday to find a plant in their garden had grown 26ft (8m) high.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-11011352</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-11011352</guid>  
+      <pubDate>Wed, 18 Aug 2010 10:29:39 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779280_jex_782787_de27-1.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48778000/jpg/_48778116_jex_782783_de27-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Rare giraffe revealed to public</title>  
+      <description>One of the world's rarest giraffes has been born in captivity in the UK</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11006992</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11006992</guid>  
+      <pubDate>Tue, 17 Aug 2010 21:19:37 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48775000/jpg/_48775293_jex_782426_de27-1.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774936_jex_782425_de33-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>US astronauts to be first twins in space</title>  
+      <description>Two US astronauts may become the first twins to be flying in space at the same time.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11007769</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11007769</guid>  
+      <pubDate>Wed, 18 Aug 2010 01:47:38 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48775000/jpg/_48775745_jex_782472_de27-1.jpg"/>  
+      <media:thumbnail width="640" height="360" url="http://news.bbcimg.co.uk/media/images/48779000/jpg/_48779090_jex_782776_de43.jpg"/> 
+    </item>  
+    <item> 
+      <title>'Terror bird'</title>  
+      <description>Giant prehistoric bird topped the pecking order in hunt for prey</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11013735</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11013735</guid>  
+      <pubDate>Wed, 18 Aug 2010 21:34:33 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48780000/jpg/_48780310_terror_plos_66.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48782000/jpg/_48782212_terror_plos_226.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48780000/jpg/_48780309_terror_plos_226.jpg"/> 
+    </item>  
+    <item> 
+      <title>Stunning snapshots</title>  
+      <description>Finalists for top natural history photo prize are revealed</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11028349</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11028349</guid>  
+      <pubDate>Thu, 19 Aug 2010 14:28:44 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48798000/jpg/_48798640_71.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48798000/jpg/_48798639_71.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48798000/jpg/_48798646_71.jpg"/> 
+    </item>  
+    <item> 
+      <title>Mammoth demise</title>  
+      <description>Scientists offer insight into why woolly mammoths died out</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-11000635</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-11000635</guid>  
+      <pubDate>Tue, 17 Aug 2010 23:22:52 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771330_mammoths-spl.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771328_mammoths-spl.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48771000/jpg/_48771331_mammoths-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Green promises</title>  
+      <description>How is the UK's coalition living up to its environmental aims?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-10981853</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-10981853</guid>  
+      <pubDate>Wed, 18 Aug 2010 08:02:05 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774231_heathrowgetty.jpg"/>  
+      <media:thumbnail width="203" height="152" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774230_heathrowgetty.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48774000/jpg/_48774234_heathrowgetty.jpg"/> 
+    </item>  
+    <item> 
+      <title>Mind the gap</title>  
+      <description>Universal access to energy can help clean up our act</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/1/hi/sci/tech/8921985.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/1/hi/sci/tech/8921985.stm</guid>  
+      <pubDate>Tue, 17 Aug 2010 19:09:52 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48772000/jpg/_48772011_003150619.jpg"/>  
+      <media:thumbnail width="226" height="170" url="http://news.bbcimg.co.uk/media/images/48772000/jpg/_48772013_003150619.jpg"/> 
+    </item>  
+    <item> 
+      <title>Lasting impression</title>  
+      <description>How Edinburgh helped shape Charles Darwin</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_8913000/8913897.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_8913000/8913897.stm</guid>  
+      <pubDate>Sat, 14 Aug 2010 11:33:11 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48740000/jpg/_48740162_3286046(1).jpg"/> 
+    </item> 
+  </channel> 
+</rss>

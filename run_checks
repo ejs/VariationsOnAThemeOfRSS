@@ -1,0 +1,10 @@
+py.test --cov *.py
+echo
+echo pyflakes
+pyflakes *.py
+echo
+echo pylint
+pylint --rcfile=.pylintrc *.py
+echo
+echo pep8
+pep8 *.py
