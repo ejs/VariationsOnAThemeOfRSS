@@ -32,5 +32,5 @@ class CountingHandler():
 def test_main():
     "Test that the main method of feed_logger works"
     stub_handler = CountingHandler()
-    feed_logger.main("test.lst", stub_handler)
+    feed_logger.simple_main("test.lst", stub_handler)
     assert stub_handler.count == 40

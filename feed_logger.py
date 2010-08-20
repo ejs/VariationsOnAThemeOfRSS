@@ -26,7 +26,7 @@ def display_item_details(feed, item):
     print item.updated, feed, item.title
 
 
-def main(filename, handler):
+def simple_main(filename, handler, _=None):
     """For all feeds in the file handle all
      elements with the handler function"""
     for feed in load_feeds(filename):
@@ -36,9 +36,12 @@ def main(filename, handler):
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
+    parser.add_option("-p", dest="processes", help="Number of parrallel 'threads'", default=3)
+
     options, args = parser.parse_args()
+    main = simple_main
     if args:
         for link in args:
-            main(link, display_item_details)
+            main(link, display_item_details, options.processes)
     else:
-        main("feeds.lst", display_item_details)
+        main("feeds.lst", display_item_details, options.processes)
