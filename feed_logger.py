@@ -1,4 +1,5 @@
 "Load and display many feeds"
+import optparse
 import feedparser
 
 
@@ -34,4 +35,10 @@ def main(filename, handler):
 
 
 if __name__ == '__main__':
-    main("feeds.lst", display_item_details)
+    parser = optparse.OptionParser()
+    options, args = parser.parse_args()
+    if args:
+        for link in args:
+            main(link, display_item_details)
+    else:
+        main("feeds.lst", display_item_details)
