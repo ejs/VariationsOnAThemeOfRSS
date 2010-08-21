@@ -105,8 +105,23 @@ def threaded_main(filename, handler, count=3):
         threading.Thread(target=thread_of_control).start()
 
 
-def twisted_main(filename, handler, count=3):
-    pass
+def eventlet_main(filename, handler, count=3):
+    import eventlet
+    feedparser = eventlet.import_patched('feedparser')
+
+    urls = list(load_urls(filename))
+
+    def load_feeds(feed_url):
+        "This wrapper exists purly to silence feed loading errors"
+        try:
+            return feedparser.parse(feed_url)
+        except Exception, e:
+            print >> sys.stderr, "load", type(e)
+            return None
+
+    pool = eventlet.GreenPool(count)
+    for feed in pool.imap(load_feeds, urls):
+        handler(feed)
 
 
 if __name__ == '__main__':
@@ -116,8 +131,8 @@ if __name__ == '__main__':
     parser.add_option("-s", dest="main", action="store_const", const=main, help="Simple, non-threaded execution", default=main)
     parser.add_option("-f", dest="main", action="store_const", const=fork_main, help="forked execution")
     parser.add_option("-m", dest="main", action="store_const", const=multyprocess_main, help="multy-proccess execution")
-    #parser.add_option("-a", dest="main", action="store_const", const=twisted_main, help="async (twisted) execution")
     parser.add_option("-t", dest="main", action="store_const", const=threaded_main, help="threaded execution")
+    parser.add_option("-e", dest="main", action="store_const", const=eventlet_main, help="asynchronously (eventlet) execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
