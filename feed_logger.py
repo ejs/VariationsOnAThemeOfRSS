@@ -12,7 +12,7 @@ def load_urls(filename):
 
 
 def load_feeds(feed_url):
-    "This wrapper exists purly to silence feed loading errors"
+    "This wrapper exists purely to silence feed loading errors"
     try:
         return feedparser.parse(feed_url)
     except Exception, e:
@@ -20,9 +20,10 @@ def load_feeds(feed_url):
         return None
 
 
+# handler methods for recieved feeds
 def display_feed(feed):
     """Dispaly every item in this feed to the termial
-        ignore invalid feeds
+       ignore invalid feeds
     """
     try:
         for item in feed.entries:
@@ -72,6 +73,7 @@ def fork_main(filename, handler, count=3):
 def multyprocess_main(filename, handler, count=3):
     """load all feeds over count processes
        then handle all results with the handler function
+
        Delays untill all feeds are read before handling
     """
     import multiprocessing
@@ -92,17 +94,19 @@ def twisted_main(filename, handler, count=3):
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="usage: %prog [options] file1 [file2 ...]", version="%prog 0.1")
-    parser.add_option("-p", dest="processes", help="Number of parrallel 'threads'", default=3)
+    parser.add_option("-n", dest="processes", help="Number of parrallel 'threads'", default=3)
 
     parser.add_option("-s", dest="main", action="store_const", const=main, help="Simple, non-threaded execution", default=main)
-    parser.add_option("-f", dest="main", action="store_const", const=python_is_unix_main, help="forked execution")
+    parser.add_option("-f", dest="main", action="store_const", const=fork_main, help="forked execution")
     parser.add_option("-m", dest="main", action="store_const", const=multyprocess_main, help="multy-proccess execution")
     #parser.add_option("-a", dest="main", action="store_const", const=twisted_main, help="async (twisted) execution")
     #parser.add_option("-t", dest="main", action="store_const", const=threaded, help="threaded execution")
 
+    parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
+
     options, args = parser.parse_args()
     if args:
         for link in args:
-            options.main(link, display_feed, options.processes)
+            options.main(link, options.handling, options.processes)
     else:
-        options.main("feeds.lst", display_feed, options.processes)
+        options.main("feeds.lst", options.handling, options.processes)
