@@ -26,8 +26,9 @@ def display_feed(feed):
        ignore invalid feeds
     """
     try:
-        for item in feed.entries:
-            print item.updated, feed.feed.link, item.title
+        if feed:
+            for item in feed.entries:
+                print item.updated, feed.feed.link, item.title
     except Exception, e:
         print >> sys.stderr, "display", type(e)
 
@@ -85,7 +86,23 @@ def multyprocess_main(filename, handler, count=3):
 
 
 def threaded_main(filename, handler, count=3):
-    pass
+    """load all feeds using count threads
+       results handled with the handler function
+
+       Used the fact that list.pop is attomic to avoid locking
+    """
+    import threading
+    urls = list(load_urls(filename))
+
+    def thread_of_control():
+        while urls:
+            try:
+                handler(load_feeds(urls.pop()))
+            except IndexError:
+                pass
+
+    for i in range(count):
+        threading.Thread(target=thread_of_control).start()
 
 
 def twisted_main(filename, handler, count=3):
@@ -100,7 +117,7 @@ if __name__ == '__main__':
     parser.add_option("-f", dest="main", action="store_const", const=fork_main, help="forked execution")
     parser.add_option("-m", dest="main", action="store_const", const=multyprocess_main, help="multy-proccess execution")
     #parser.add_option("-a", dest="main", action="store_const", const=twisted_main, help="async (twisted) execution")
-    #parser.add_option("-t", dest="main", action="store_const", const=threaded, help="threaded execution")
+    parser.add_option("-t", dest="main", action="store_const", const=threaded_main, help="threaded execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
