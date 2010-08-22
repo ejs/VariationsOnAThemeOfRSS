@@ -1,4 +1,5 @@
 "Load and display many feeds"
+import functools
 import optparse
 import feedparser
 
@@ -20,17 +21,27 @@ def load_feeds(feed_url):
         return None
 
 
-# handler methods for recieved feeds
+# handler methods
+def handler_decorator(func):
+    "Decorator to make safe handling easier"
+    @functools.wraps(func)
+    def handler(feed):
+        "Handle any feed, ignoring empty feeds and errors"
+        if feed:
+            try:
+                func(feed)
+            except Exception, e:
+                print >> sys.stderr, "display", type(e)
+    return handler
+
+
+@handler_decorator
 def display_feed(feed):
     """Dispaly every item in this feed to the termial
        ignore invalid feeds
     """
-    try:
-        if feed:
-            for item in feed.entries:
-                print item.updated, feed.feed.link, item.title
-    except Exception, e:
-        print >> sys.stderr, "display", type(e)
+    for item in feed.entries:
+        print item.updated, feed.feed.link, item.title
 
 
 # single thread syncronus code
