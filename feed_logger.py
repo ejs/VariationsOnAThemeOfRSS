@@ -152,4 +152,5 @@ if __name__ == '__main__':
         for link in args:
             options.main(link, options.handling, options.processes)
     else:
-        options.main("feeds.lst", options.handling, options.processes)
+        parser.error("provide at least one source file")
+
