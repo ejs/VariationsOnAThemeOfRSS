@@ -134,6 +134,47 @@ def eventlet_main(filename, handler, count=3):
         handler(feed)
 
 
+def queued_main(filename, handler, count=3):
+    """load all feeds using count threads
+       communicate through queues to avoid both locking and waits
+
+        loadins in count-1 thread, uses last thread for output
+    """
+    import threading
+    import Queue
+
+    def loader():
+        while True:
+            item = in_queue.get()
+            out_queue.put(load_feeds(item))
+            in_queue.task_done()
+
+    def writer():
+        while True:
+            item = out_queue.get()
+            handler(item)
+            out_queue.task_done()
+
+    in_queue = Queue.Queue()
+    out_queue = Queue.Queue()
+
+    def start_demon(func):
+        t = Thread(target=func)
+        t.daemon = True
+        t.start()
+
+    for i in range(count-1):
+        start_demon(loader)
+    start_demon(writer)
+
+    for item in load_urls(filename):
+        in_queue.put(item)
+
+    # wait till all feeds are fully processed
+    in_queue.join()
+    out_queue.join()
+
+
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="usage: %prog [options] file1 [file2 ...]", version="%prog 0.1")
     parser.add_option("-n", dest="processes", help="Number of parrallel 'threads'", default=3)
@@ -143,6 +184,7 @@ if __name__ == '__main__':
     parser.add_option("-m", dest="main", action="store_const", const=multyprocess_main, help="multy-proccess execution")
     parser.add_option("-t", dest="main", action="store_const", const=threaded_main, help="threaded execution")
     parser.add_option("-e", dest="main", action="store_const", const=eventlet_main, help="asynchronously (eventlet) execution")
+    parser.add_option("-q", dest="main", action="store_const", const=eventlet_main, help="queued threaded execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
