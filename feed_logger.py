@@ -37,9 +37,7 @@ def handler_decorator(func):
 
 @handler_decorator
 def display_feed(feed):
-    """Dispaly every item in this feed to the termial
-       ignore invalid feeds
-    """
+    """Dispaly every item in this feed to the termial"""
     for item in feed.entries:
         print item.updated, feed.feed.link, item.title
 
@@ -114,6 +112,7 @@ def threaded_main(filename, handler, count=3):
 
     for i in range(count):
         threading.Thread(target=thread_of_control).start()
+    # as no threads are demons execution continues till compleation
 
 
 def eventlet_main(filename, handler, count=3):
@@ -153,4 +152,3 @@ if __name__ == '__main__':
             options.main(link, options.handling, options.processes)
     else:
         parser.error("provide at least one source file")
-
