@@ -12,7 +12,7 @@ def load_urls(filename):
             yield line.strip()
 
 
-def load_feeds(feed_url):
+def load_feed(feed_url):
     "This wrapper exists purely to silence feed loading errors"
     try:
         return feedparser.parse(feed_url)
@@ -47,7 +47,7 @@ def main(filename, handler, count=None):
     """For all feeds in the file handle all
      elements with the handler function"""
     for feed_url in load_urls(filename):
-        handler(load_feeds(feed_url))
+        handler(load_feed(feed_url))
 
 
 #parallel versions of the code
@@ -66,7 +66,7 @@ def fork_main(filename, handler, count=3):
             feed_url = urls.pop()
             pid = os.fork()
             if pid == 0: #child process - handle one feed and die
-                handler(load_feeds(feed_url))
+                handler(load_feed(feed_url))
                 break
         else:
             # if we have enough proccesses already
@@ -89,7 +89,7 @@ def multyprocess_main(filename, handler, count=3):
     import multiprocessing
 
     pool = multiprocessing.Pool(count)
-    for feed in pool.map(load_feeds, load_urls(filename)):
+    for feed in pool.map(load_feed, load_urls(filename)):
         handler(feed)
     pool.close()
 
@@ -106,7 +106,7 @@ def threaded_main(filename, handler, count=3):
     def thread_of_control():
         while urls:
             try:
-                handler(load_feeds(urls.pop()))
+                handler(load_feed(urls.pop()))
             except IndexError:
                 pass
 
@@ -121,7 +121,7 @@ def eventlet_main(filename, handler, count=3):
 
     urls = list(load_urls(filename))
 
-    def load_feeds(feed_url):
+    def load_feed(feed_url):
         "This wrapper exists purly to silence feed loading errors"
         try:
             return feedparser.parse(feed_url)
@@ -130,7 +130,7 @@ def eventlet_main(filename, handler, count=3):
             return None
 
     pool = eventlet.GreenPool(count)
-    for feed in pool.imap(load_feeds, urls):
+    for feed in pool.imap(load_feed, urls):
         handler(feed)
 
 
@@ -146,7 +146,7 @@ def queued_main(filename, handler, count=3):
     def loader():
         while True:
             item = in_queue.get()
-            out_queue.put(load_feeds(item))
+            out_queue.put(load_feed(item))
             in_queue.task_done()
 
     def writer():
