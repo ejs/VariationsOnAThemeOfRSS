@@ -2,6 +2,6 @@ Gven a small list of valid RSS feeds in a text file called feeds.lst write a sim
 
 Multiple HTTP requests should be made in parallel but should be limited (to some arbitrarily low number for the purpose of this exercise, e.g. 3-5 concurrent requests) to avoid consuming the computer's resources.
 
-You're free to use any form of concurrency (multi-process, multi-thread, cooperative threads, event-driven, etc) and can make use of available packages such as feedparser, http://pypi.python.org/pypi/FeedParser, to help.
+Use any form of concurrency (multi-process, multi-thread, cooperative threads, event-driven, etc) and can make use of available packages such as feedparser, http://pypi.python.org/pypi/FeedParser, to help.
 
 If a feed cannot be downloaded it can simply be ignored, as long as the failure does not cause the whole script to die.
