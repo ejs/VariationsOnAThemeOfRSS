@@ -175,6 +175,59 @@ def queued_main(filename, handler, count=3):
     out_queue.join()
 
 
+def queued_main_two(filename, handler, count=3):
+    """load all feeds using count threads
+       communicate through queues to avoid both locking and delays
+
+       loadins in count-1 thread, uses last thread for output
+
+       this version uses a higher abstraction (queue consumer thread)
+    """
+    import threading
+    import Queue
+
+    # this would be better at the main level or in a library
+    # its only here to make it clear which block of code
+    # it is part of
+    # this also may be better done by subclassing Thread
+    def start_consumer_demon(source, consumer):
+        """Start a demon that consumes from source passing each
+        item to the consumer"""
+
+        def server():
+            """Consume items from source passing each to the consumer
+               each task is marked as done before looking for another
+            """
+            while True:
+                item = source.get()
+                try:
+                    consumer(item)
+                except Exception, e:
+                    print >> sys.stderr, type(e)
+                    print >> sys,stderr, e
+                finally:
+                    source.task_done()
+
+        t = threading.Thread(target=server)
+        t.daemon = True
+        t.start()
+
+    in_queue = Queue.Queue()
+    out_queue = Queue.Queue()
+
+    for i in range(count-1):
+        start_consumer_demon(in_queue, lambda item: out_queue.put(load_feed(item)))
+
+    start_consumer_demon(out_queue, handler)
+
+    for item in load_urls(filename):
+        in_queue.put(item)
+
+    # wait till all feeds are fully processed
+    in_queue.join()
+    out_queue.join()
+
+
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="usage: %prog [options] file1 [file2 ...]", version="%prog 0.1")
     parser.add_option("-n", dest="processes", help="Number of parrallel 'threads'", default=3)
@@ -185,6 +238,7 @@ if __name__ == '__main__':
     parser.add_option("-t", dest="main", action="store_const", const=threaded_main, help="threaded execution")
     parser.add_option("-e", dest="main", action="store_const", const=eventlet_main, help="asynchronously (eventlet) execution")
     parser.add_option("-q", dest="main", action="store_const", const=queued_main, help="queued threaded execution")
+    parser.add_option("-Q", dest="main", action="store_const", const=queued_main_two, help="cleaner queued threaded execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
