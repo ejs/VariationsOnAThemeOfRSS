@@ -143,6 +143,14 @@ def queued_main(filename, handler, count=3):
     import threading
     import Queue
 
+    def start_demon(func):
+        t = threading.Thread(target=func)
+        t.daemon = True
+        t.start()
+
+    in_queue = Queue.Queue()
+    out_queue = Queue.Queue()
+
     def loader():
         while True:
             item = in_queue.get()
@@ -154,14 +162,6 @@ def queued_main(filename, handler, count=3):
             item = out_queue.get()
             handler(item)
             out_queue.task_done()
-
-    in_queue = Queue.Queue()
-    out_queue = Queue.Queue()
-
-    def start_demon(func):
-        t = Thread(target=func)
-        t.daemon = True
-        t.start()
 
     for i in range(count-1):
         start_demon(loader)
@@ -184,7 +184,7 @@ if __name__ == '__main__':
     parser.add_option("-m", dest="main", action="store_const", const=multyprocess_main, help="multy-proccess execution")
     parser.add_option("-t", dest="main", action="store_const", const=threaded_main, help="threaded execution")
     parser.add_option("-e", dest="main", action="store_const", const=eventlet_main, help="asynchronously (eventlet) execution")
-    parser.add_option("-q", dest="main", action="store_const", const=eventlet_main, help="queued threaded execution")
+    parser.add_option("-q", dest="main", action="store_const", const=queued_main, help="queued threaded execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
