@@ -261,9 +261,12 @@ def queued_main_three(filename, handler, count=3):
                 self.consumer = consumer
 
         def __enter__(self):
-            # potential race condition
+            # This ordering avoids race conditions by allowing
+            # the option of slightly more than the requested number
+            # of threads to run for a short period of time
+            item = self.source.get()
             self.cap.acquire()
-            return self.source.get()
+            return item
 
         def __exit__(self, type, value, traceback):
             if type == None:
