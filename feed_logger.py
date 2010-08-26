@@ -204,8 +204,8 @@ def queued_main_two(filename, handler, count=3):
                each task is marked as done before looking for another
             """
             while True:
-                cap.acquire()
                 item = source.get()
+                cap.acquire()
                 try:
                     consumer(item)
                 except Exception, e:
@@ -249,7 +249,7 @@ def queued_main_three(filename, handler, count=3):
     import Queue
 
     class Consumer(threading.Thread):
-        """A demon thread to read from a queue handling
+        """A thread to read from a queue handling
            each item taken with the consumer method or function
         """
         def __init__(self, source, consumer=None, cap=None, daemon=True):
