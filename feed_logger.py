@@ -229,6 +229,58 @@ def queued_main_two(filename, handler, count=3):
     out_queue.join()
 
 
+def queued_main_three(filename, handler, count=3):
+    """load all feeds using count threads
+       communicate through queues to avoid both locking and delays
+
+       loadins in count-1 thread, uses last thread for output
+
+       this version uses a class as the daemon controller
+    """
+    import threading
+    import Queue
+
+    class Consumer(threading.Thread):
+        """A demon thread to read from a queue handling
+           each item taken with the consumer method or function
+        """
+        def __init__(self, source, consumer=None, daemon=True):
+            super(ConsumerDemon, self).__init__()
+            self.source = source
+            self.daemon = daemon
+            if consumer:
+                self.consumer = consumer
+
+        def run(self):
+            while True:
+                item = self.source.get()
+                try:
+                    self.consumer(item)
+                except Exception, e:
+                    print >> sys.stderr, type(e)
+                    print >> sys.stderr, e
+                finally:
+                    self.source.task_done()
+
+        def consumer(self, item):
+            pass
+
+    in_queue = Queue.Queue()
+    out_queue = Queue.Queue()
+
+    for i in range(count-1):
+        Consumer(in_queue, lambda item: out_queue.put(load_feed(item))).start()
+
+    Consumer(out_queue, handler).start()
+
+    for item in load_urls(filename):
+        in_queue.put(item)
+
+    # wait till all feeds are fully processed
+    in_queue.join()
+    out_queue.join()
+
+
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="usage: %prog [options] file1 [file2 ...]", version="%prog 0.1")
     parser.add_option("-n", dest="processes", help="Number of parrallel 'threads'", default=3)
@@ -240,6 +292,7 @@ if __name__ == '__main__':
     parser.add_option("-e", dest="main", action="store_const", const=eventlet_main, help="asynchronously (eventlet) execution")
     parser.add_option("-q", dest="main", action="store_const", const=queued_main, help="queued threaded execution")
     parser.add_option("-Q", dest="main", action="store_const", const=queued_main_two, help="cleaner queued threaded execution")
+    parser.add_option("-O", dest="main", action="store_const", const=queued_main_three, help="cleaner queued threaded execution")
 
     parser.add_option("-o", dest="handling", action="store_const", const=display_feed, help="Print breaf descriptions to stdout", default=display_feed)
 
