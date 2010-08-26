@@ -138,8 +138,6 @@ def eventlet_main(filename, handler, count=3):
 def queued_main(filename, handler, count=3):
     """load all feeds using count threads
        communicate through queues to avoid both locking and waits
-
-        loadins in count-1 thread, uses last thread for output
     """
     import threading
     import Queue
@@ -184,8 +182,6 @@ def queued_main(filename, handler, count=3):
 def queued_main_two(filename, handler, count=3):
     """load all feeds using count threads
        communicate through queues to avoid both locking and delays
-
-       loadins in count-1 thread, uses last thread for output
 
        this version uses a higher abstraction (queue consumer thread)
     """
@@ -240,8 +236,6 @@ def queued_main_two(filename, handler, count=3):
 def queued_main_three(filename, handler, count=3):
     """load all feeds using count threads
        communicate through queues to avoid both locking and delays
-
-       loadins in count-1 thread, uses last thread for output
 
        this version uses a class as the daemon controller
     """
