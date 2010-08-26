@@ -1,6 +1,7 @@
 "Load and display many feeds"
 import functools
 import optparse
+import sys
 import feedparser
 
 
@@ -31,7 +32,7 @@ def handler_decorator(func):
             try:
                 func(feed)
             except Exception, e:
-                print >> sys.stderr, "display", type(e)
+                print >> sys.stderr, "display", type(e), e
     return handler
 
 
@@ -204,7 +205,7 @@ def queued_main_two(filename, handler, count=3):
                     consumer(item)
                 except Exception, e:
                     print >> sys.stderr, type(e)
-                    print >> sys,stderr, e
+                    print >> sys.stderr, e
                 finally:
                     source.task_done()
 
