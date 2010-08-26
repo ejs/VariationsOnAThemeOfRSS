@@ -191,7 +191,7 @@ def queued_main_two(filename, handler, count=3):
     # its only here to make it clear which block of code
     # it is part of
     # this also may be better done by subclassing Thread
-    def start_consumer_demon(source, consumer):
+    def consumer_demon(source, consumer):
         """Start a demon that consumes from source passing each
         item to the consumer"""
 
@@ -211,15 +211,15 @@ def queued_main_two(filename, handler, count=3):
 
         t = threading.Thread(target=server)
         t.daemon = True
-        t.start()
+        return t
 
     in_queue = Queue.Queue()
     out_queue = Queue.Queue()
 
     for i in range(count-1):
-        start_consumer_demon(in_queue, lambda item: out_queue.put(load_feed(item)))
+        consumer_demon(in_queue, lambda item: out_queue.put(load_feed(item))).start()
 
-    start_consumer_demon(out_queue, handler)
+    consumer_demon(out_queue, handler).start()
 
     for item in load_urls(filename):
         in_queue.put(item)
