@@ -195,8 +195,7 @@ def queued_main_two(filename, handler, count=3):
     # this would be better at the main level or in a library
     # its only here to make it clear which block of code
     # it is part of
-    # this also may be better done by subclassing Thread
-    def consumer_demon(source, consumer):
+    def consumer_demon(source, consumer, cap):
         """Start a demon that consumes from source passing each
         item to the consumer"""
 
@@ -205,6 +204,7 @@ def queued_main_two(filename, handler, count=3):
                each task is marked as done before looking for another
             """
             while True:
+                cap.acquire()
                 item = source.get()
                 try:
                     consumer(item)
@@ -213,6 +213,7 @@ def queued_main_two(filename, handler, count=3):
                     print >> sys.stderr, e
                 finally:
                     source.task_done()
+                    cap.release()
 
         t = threading.Thread(target=server)
         t.daemon = True
@@ -220,11 +221,13 @@ def queued_main_two(filename, handler, count=3):
 
     in_queue = Queue.Queue()
     out_queue = Queue.Queue()
+    cap = threading.Semaphore(count)
 
-    for i in range(count-1):
-        consumer_demon(in_queue, lambda item: out_queue.put(load_feed(item))).start()
+    download = lambda item: out_queue.put(load_feed(item))
+    for i in range(count):
+        consumer_demon(in_queue, download, cap).start()
 
-    consumer_demon(out_queue, handler).start()
+    consumer_demon(out_queue, handler, cap).start()
 
     for item in load_urls(filename):
         in_queue.put(item)
@@ -249,15 +252,17 @@ def queued_main_three(filename, handler, count=3):
         """A demon thread to read from a queue handling
            each item taken with the consumer method or function
         """
-        def __init__(self, source, consumer=None, daemon=True):
-            super(ConsumerDemon, self).__init__()
+        def __init__(self, source, consumer=None, cap=threading.Semaphore(), daemon=True):
+            super(Consumer, self).__init__()
             self.source = source
             self.daemon = daemon
+            self.cap = cap
             if consumer:
                 self.consumer = consumer
 
         def run(self):
             while True:
+                self.cap.acquire()
                 item = self.source.get()
                 try:
                     self.consumer(item)
@@ -266,17 +271,20 @@ def queued_main_three(filename, handler, count=3):
                     print >> sys.stderr, e
                 finally:
                     self.source.task_done()
+                    self.cap.release()
 
         def consumer(self, item):
             pass
 
     in_queue = Queue.Queue()
     out_queue = Queue.Queue()
+    cap = threading.BoundedSemaphore(count)
 
+    download = lambda item: out_queue.put(load_feed(item))
     for i in range(count-1):
-        Consumer(in_queue, lambda item: out_queue.put(load_feed(item))).start()
+        Consumer(in_queue, download, cap).start()
 
-    Consumer(out_queue, handler).start()
+    Consumer(out_queue, handler, cap).start()
 
     for item in load_urls(filename):
         in_queue.put(item)
