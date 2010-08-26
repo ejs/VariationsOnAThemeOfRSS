@@ -260,18 +260,23 @@ def queued_main_three(filename, handler, count=3):
             if consumer:
                 self.consumer = consumer
 
+        def __enter__(self):
+            # potential race condition
+            self.cap.acquire()
+            return self.source.get()
+
+        def __exit__(self, type, value, traceback):
+            if type == None:
+                self.source.task_done()
+                self.cap.release()
+            else:
+                print >> sys.stderr, type, value
+            return True # supress any exception
+
         def run(self):
             while True:
-                self.cap.acquire()
-                item = self.source.get()
-                try:
+                with self as item:
                     self.consumer(item)
-                except Exception, e:
-                    print >> sys.stderr, type(e)
-                    print >> sys.stderr, e
-                finally:
-                    self.source.task_done()
-                    self.cap.release()
 
         def consumer(self, item):
             pass
