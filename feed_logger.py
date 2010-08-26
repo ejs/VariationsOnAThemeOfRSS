@@ -252,11 +252,11 @@ def queued_main_three(filename, handler, count=3):
         """A demon thread to read from a queue handling
            each item taken with the consumer method or function
         """
-        def __init__(self, source, consumer=None, cap=threading.Semaphore(), daemon=True):
+        def __init__(self, source, consumer=None, cap=None, daemon=True):
             super(Consumer, self).__init__()
             self.source = source
             self.daemon = daemon
-            self.cap = cap
+            self.cap = cap or threading.BoundedSemaphore()
             if consumer:
                 self.consumer = consumer
 
