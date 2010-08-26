@@ -151,20 +151,25 @@ def queued_main(filename, handler, count=3):
 
     in_queue = Queue.Queue()
     out_queue = Queue.Queue()
+    cap = threading.BoundedSemaphore(count)
 
     def loader():
         while True:
+            cap.acquire()
             item = in_queue.get()
             out_queue.put(load_feed(item))
             in_queue.task_done()
+            cap.release()
 
     def writer():
         while True:
+            cap.acquire()
             item = out_queue.get()
             handler(item)
             out_queue.task_done()
+            cap.release()
 
-    for i in range(count-1):
+    for i in range(count):
         start_demon(loader)
     start_demon(writer)
 
