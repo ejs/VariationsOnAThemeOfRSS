@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 "Load and display feeds in parallel"
 import optparse
 import Queue

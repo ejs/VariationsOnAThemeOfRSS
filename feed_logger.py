@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 "Load and display many feeds"
 import functools
 import optparse
