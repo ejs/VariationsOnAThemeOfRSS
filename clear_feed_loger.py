@@ -26,11 +26,11 @@ class LoadFeed(consumer.Filter):
 def display_feed(feed):
     """Dispaly every item in this feed to the termial"""
     if feed:
-        try:
-            for item in feed.entries:
+        for item in feed.entries:
+            try:
                 print item.updated, feed.feed.link, item.title
-        except Exception, e:
-            print >> sys.stderr, "display", type(e), e
+            except Exception, e:
+                print >> sys.stderr, "display", type(e), e
 
 
 def main(feed_links, count=3):
