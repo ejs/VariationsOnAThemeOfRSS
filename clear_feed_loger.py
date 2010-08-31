@@ -44,7 +44,7 @@ def main(feed_links, count=3):
     for item in feed_links:
         in_queue.put(item)
 
-    for i in range(count-1):
+    for i in range(count):
         LoadFeed(in_queue, out_queue, cap).start()
 
     consumer.Consumer(out_queue, display_feed, cap).start()

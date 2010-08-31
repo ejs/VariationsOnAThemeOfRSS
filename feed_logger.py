@@ -283,7 +283,7 @@ def queued_main_three(filename, handler, count=3):
     cap = threading.BoundedSemaphore(count)
 
     download = lambda item: out_queue.put(load_feed(item))
-    for i in range(count-1):
+    for i in range(count):
         Consumer(in_queue, download, cap).start()
 
     Consumer(out_queue, handler, cap).start()
