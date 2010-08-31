@@ -263,11 +263,10 @@ def queued_main_three(filename, handler, count=3):
             return item
 
         def __exit__(self, type, value, traceback):
-            if type == None:
-                self.source.task_done()
-                self.cap.release()
-            else:
+            if type != None:
                 print >> sys.stderr, type, value
+            self.source.task_done()
+            self.cap.release()
             return True # supress any exception
 
         def run(self):
