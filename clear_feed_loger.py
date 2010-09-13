@@ -15,14 +15,6 @@ def load_urls(filename):
             yield line.strip()
 
 
-class LoadFeed(consumer.Filter):
-    def __init__(self, source, sink, cap=None):
-        super(LoadFeed, self).__init__(source, sink, cap=cap)
-
-    def consumer(self, feed_url):
-        return feedparser.parse(feed_url)
-
-
 def display_feed(feed):
     """Dispaly every item in this feed to the termial"""
     if feed:
@@ -45,7 +37,7 @@ def main(feed_links, count=3):
         in_queue.put(item)
 
     for i in range(count):
-        LoadFeed(in_queue, out_queue, cap).start()
+        consumer.Filter(in_queue, out_queue, feedparser.parse, cap).start()
 
     consumer.Consumer(out_queue, display_feed, cap).start()
     # wait till all feeds are fully processed
